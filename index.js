@@ -36,6 +36,6 @@ app.get('/', function(req, res) {
 // app.listen(process.env.PORT || 8080);
 // console.log('listening on port 8080... hahaha...');
 
-http.listen(process.env.PORT || 8080, function(){
+app.listen(process.env.PORT || 8080, function(){
   console.log('Listening on port 8080...');
 });

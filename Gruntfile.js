@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 	    	src:[
 	    		 'public/javascript/vendor/jquery-2.1.0.min.js',
 	    		 'public/javascript/vendor/modernizr-2.7.1.min',
-	    		 'public/javascript/bootstrap.min.js'
+	    		 'public/javascript/bootstrap.min.js',
 	    		 'public/javascript/vendor/wow.min.js',
 	    		 'public/javascript/vendor/vivus-svg-animation.min.js',
 	    		 'public/javascript/vendor/jquery.ajaxchimp.js',
