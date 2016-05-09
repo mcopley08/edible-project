@@ -1143,7 +1143,7 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   font-size: 17px;
   line-height: 1.42857;
   color: #696f6f;
@@ -3648,7 +3648,7 @@ tbody.collapse.in {
   padding: 30px 0;
   margin-bottom: 0;
   color: white;
-  background: #2e2f41 url(../images/bg-1.png) 0 0 no-repeat;
+  background: #2e2f41 url(../images/accent-texture.png) 0 0 no-repeat;
   background-size: cover;
   text-align: center;
 }

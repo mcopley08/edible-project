@@ -1,0 +1,17 @@
+.bulleted-list {
+	font-size: 1.2em;
+	text-shadow: 2px 2px 4px #000;
+}
+
+.fork-heading {
+	margin-top: -3.8em; 
+	margin-bottom: 1.5em;
+	position: relative; 
+	z-index:1 !important;
+}
+
+.shadow {
+	background: rgba(0, 0, 0, 0.45);
+    border-radius: 6px;
+    padding: 8px 8px 8px 8px;
+}

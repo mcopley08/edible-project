@@ -1,0 +1,78 @@
+/* Fork Animation (Horizontal slide to right) */
+
+.fork-right {
+-webkit-animation: cssAnimation 1.712s 1 ease-out;
+-moz-animation:  cssAnimation 1.712s 1 ease-out;
+-o-animation: cssAnimation 1.712s 1 ease-out;
+}
+@-webkit-keyframes cssAnimation {
+from {-webkit-transform: rotate(0deg) scale(1.000) skew(-180deg) translate(-300px) ;
+-moz-transform: rotate(0deg) scale(1.000) skew(-180deg) translate(-300px) ;
+-o-transform: rotate(0deg) scale(1.000) skew(-180deg) translate(-300px) ;
+ }
+to {-webkit-transform: rotate(0deg) scale(1.000) skew(-180deg) translate(0px) ;
+-moz-transform: rotate(0deg) scale(1.000) skew(-180deg) translate(0px) ;
+-o-transform: rotate(0deg) scale(1.000) skew(-180deg) translate(0px) ;
+ }
+}
+@-moz-keyframes cssAnimation {
+from {-webkit-transform: rotate(0deg) scale(1.000) skew(-180deg) translate(-300px) ;
+-moz-transform: rotate(0deg) scale(1.000) skew(-180deg) translate(-300px) ;
+-o-transform: rotate(0deg) scale(1.000) skew(-180deg) translate(-300px) ;
+ }
+to {-webkit-transform: rotate(0deg) scale(1.000) skew(-180deg) translate(0px) ;
+-moz-transform: rotate(0deg) scale(1.000) skew(-180deg) translate(0px) ;
+-o-transform: rotate(0deg) scale(1.000) skew(-180deg) translate(0px) ;
+ }
+}
+@-o-keyframes cssAnimation {
+from {-webkit-transform: rotate(0deg) scale(1.000) skew(-180deg) translate(-300px) ;
+-moz-transform: rotate(0deg) scale(1.000) skew(-180deg) translate(-300px) ;
+-o-transform: rotate(0deg) scale(1.000) skew(-180deg) translate(-300px) ;
+ }
+to {-webkit-transform: rotate(0deg) scale(1.000) skew(-180deg) translate(0px) ;
+-moz-transform: rotate(0deg) scale(1.000) skew(-180deg) translate(0px) ;
+-o-transform: rotate(0deg) scale(1.000) skew(-180deg) translate(0px) ;
+ }
+}
+
+/* Iphone Animation */
+
+.iphone-up {
+  /*-webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;*/
+  -webkit-animation: slideInUp 1.712s 1 ease-out;
+  -moz-animation:  slideInUp 1.712s 1 ease-out;
+  -o-animation: slideInUp 1.712s 1 ease-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-transform: translateZ(0);
+-moz-transform: translateZ(0);
+-ms-transform: translateZ(0);
+-o-transform: translateZ(0);
+transform: translateZ(0);
+  }
+  @-webkit-keyframes slideInUp {
+  0% {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  }
+  }
+  @keyframes slideInUp {
+  0% {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  }
+} 
