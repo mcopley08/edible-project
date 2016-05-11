@@ -2580,7 +2580,7 @@ legend {
 }
 
 label {
-  display: inline-block;
+  display: inherit;
   max-width: 100%;
   margin-bottom: 5px;
   font-weight: bold;
@@ -3648,7 +3648,8 @@ tbody.collapse.in {
   padding: 30px 0;
   margin-bottom: 0;
   color: white;
-  background: #2e2f41 url(../images/accent-texture.png) 0 0 no-repeat;
+  /*background: #2e2f41 url(../images/accent-texture.png) 0 0 no-repeat;*/
+  background: #27ae60;
   background-size: cover;
   text-align: center;
 }
@@ -6467,7 +6468,7 @@ transform: translateZ(0);
   }
 } 
 .bulleted-list {
-	font-size: 1.2em;
+	font-size: 1.4em;
 	text-shadow: 2px 2px 4px #000;
 }
 
@@ -6479,7 +6480,75 @@ transform: translateZ(0);
 }
 
 .shadow {
-	background: rgba(0, 0, 0, 0.45);
+	background: rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 8px 8px 8px 8px;
+    padding: 4px 4px 4px 4px;
+} 
+
+.btn {
+	margin-bottom: 5px !important; 
+} 
+
+.btn-primary {
+  color: white;
+  background-color: #2ecc71;
+  border-color: #009d95;
+}
+
+.btn-secondary {
+  color: white;
+  background-color: #27ae60;
+  border-color: #009d95;
+}
+
+/* BK area: cool input area stuff */
+
+.inline-label{
+    position: relative;
+}
+.inline-label label {
+  position: absolute;
+  top: 0;
+  font-size: 80%;
+  color: #788991;
+  font-weight: bold;
+  padding: 6px 12px;
+}
+
+.inline-label .form-control{
+  padding-top: 24px;
+  height: auto;
+}
+
+.inline-label .form-control:focus{
+    box-shadow: none;
+}
+
+.inline-label .form-control:focus + label{
+    color: #29abe9;
+}
+
+
+/* typed.js blinking cursor */
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }

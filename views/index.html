@@ -15,10 +15,41 @@
     <meta name="googlebot" content="index,follow">
 
     <!-- Title -->
-    <title>Guri Guri Nyoi &mdash; Bootstrap 3 iPhone App Templates</title>
+    <title>The Edible Project</title>
 
     <!-- Templates core CSS -->
     <link href="build/app.min.css" rel="stylesheet">
+    <style type="text/css">
+      @font-face {
+        font-family: 'Jhonny';
+        src: url('fonts/JHONNY.ttf') format('truetype');
+      }
+      @font-face {
+        font-family: 'Abel';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Abel'), local('Abel-Regular'), url(fonts/Abel.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+      }
+      h1 {
+        font-size: 5em !important;
+        letter-spacing: 1.5px;
+        margin: 0.27em 0;
+        font-family: 'Jhonny';
+        text-shadow: 3px 3px 5px #000;
+        /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+        position: relative; 
+        z-index:10 !important;
+        color: #fff;
+      }
+      body {
+        font-family: 'Abel', sans-serif;
+        font-size: 17px;
+        line-height: 1.42857;
+        color: #696f6f;
+        background-color: white;
+      }
+    </style>
 
     <!-- Favicons -->
     <link href="images/favicon/favicon.png" rel="shortcut icon">
@@ -37,50 +68,6 @@
   </head>
   <body class="index" id="to-top">
 
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- Mailchimp stuff -->
-  <div class="horizontal-subscribe-form">
-
-      <form class="form-inline mailchimp" action="subscribe.php" method="POST">
-          
-          <input type="email" id="cf-email" name="email" class="form-control input-box hide-this" placeholder="Enter your Email">
-
-          <button type="submit" id="submit_subscribe" class="btn btn-primary standard-button hide-this">Subscribe</button>
-          
-      </form>
-
-      <!-- MAILCHIMP SUCCESS AND ERROR MESSAGE -->
-      <p class="mailchimp-success white-text"><span class="icon-check-alt2 colored-text"></span>Thanks! Please confirm your subscription from your email inbox</p>
-      <p class="mailchimp-error white-text"><span class="icon-close-alt2"></span>Error! Please enter correct email</p>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- Side nav -->
     <nav class="side-nav" role="navigation">
 
@@ -93,54 +80,72 @@
       
     </nav> <!-- /.side-nav -->
 
-
-
-
-    <!-- Jumbotron -->
-    <header class="jumbotron" role="banner">
-
+    <!-- User Benefits -->
+    <section class="jumbotron" role="banner">
       <div class="container">
-
         <div class="row">
-
-          <div class="col-md-7">
+          <div class="col-md-8">
 
             <!-- Logo -->
-            <figure class="text-center">
+            <!-- <figure class="text-center">
               <a href="./index.html">
                 <img class="img-logo" src="images/logo.png" alt="">
               </a>
-            </figure> <!-- /.text-center -->
+            </figure> --> 
+            <!-- /.text-center -->
 
             <!-- Title -->
-            <h1>daur awesome mom   here</h1>
+            <h1>
+              User Benefits
+            </h1>
+
+            <!-- Fork -->
+            <figure class="fork-heading">
+              <img class="img-iPhone fork-right" src="images/fork-no-shadow.png" style="width: 450px !important" alt="">
+            </figure>
 
             <!-- Sub title -->
-            <p>Architecto numquam perspiciatis commodi laboriosam quod debitis placeat maxime quaerat soluta quia porro dicta sunt nemo voluptates!</p>
+            <div class="row bulleted-list shadow">
+              <div class="col-md-6">
+                <ul>
+                  <li>Learn safe food options</li>
+                  <li>Know menu beforehand</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul>
+                  <li>Spend less time w/questions</li>
+                  <li>Track nutritional information</li>
+                </ul>
+              </div>
+            </div>
 
-            <!-- Button -->
-            <p class="btn-app-store">
-              <a class="btn btn-danger btn-lg" href="#fakelinks">
-                <img src="images/btn-app-store.png" alt="">
-              </a>
-            </p> <!-- /.btn-app-store -->
+            <p class="bulleted-list" style="margin-top: 1em">If this interests you, we'll send you exactly one email to let you know
+            when the app is released on iOS and Android.</p>
 
-          </div> <!-- /.col-md-7 -->
+            <!-- Mailchimp stuff -->
+            <div class="horizontal-subscribe-form" style="margin-top: 1em">
+                <form class="form-inline mailchimp" action="subscribe.php" method="POST">
+                    <input type="email" id="cf-email" name="email" class="form-control input-box hide-this" placeholder="Enter your Email...">
+                    <button type="submit" id="submit_subscribe" class="btn btn-primary standard-button hide-this">Let me know!</button>
+                </form>
+                <!-- MAILCHIMP SUCCESS AND ERROR MESSAGE -->
+                <p class="mailchimp-success white-text"><span class="icon-check-alt2 colored-text"></span>Thanks! Please confirm your subscription from your email inbox</p>
+                <p class="mailchimp-error white-text"><span class="icon-close-alt2"></span>Error! Please enter correct email</p>
+            </div>
+          </div> <!-- /.col-md-8 -->
 
-          <div class="col-md-5">
+          <div class="col-md-4">
 
             <!-- Images showcase -->
-            <figure>
+            <figure class="iphone-up">
               <img class="img-iPhone" src="images/iphone/2.png" alt="">
             </figure>
 
-          </div> <!-- /.col-md-5 -->
-          
+          </div> <!-- /.col-md-4 -->
         </div> <!-- /.row -->
-        
       </div> <!-- /.container -->
-
-    </header> <!-- /.jumbotron -->
+    </section> <!-- /.jumbotron -->
 
 
 
@@ -150,11 +155,10 @@
 
       <div class="container">
 
-        <div class="row">
-
-          <h1>The Edible Project</h1>
+      <h1>The Edible Project</h1>
           <p>Our goal is to make dietary restriction &amp; nutritional information available to everyone who dines at restaurants. We are beginning our journey at local restaurants in Ann Arbor, MI and are looking to expand beyond that soon after.</p>
 
+        <div class="row">
           <div class="col-md-4 col-services">
             
             <!-- Icons -->
@@ -213,45 +217,171 @@
     
     <section class="subscribe-section" id="section-3">
 
-      <div class="container">
+      <div class="container" id="start-example">
 
         <div class="row">
 
-          <div class="col-md-4 col-features text-center">
-            
-            <h2>Try a demo with Burger King!</h2>
-            <p>Enter your diet and view your options.</p>
+          <form id="bk-example">
 
-            <p>
-              <a class="btn btn-danger" href="#title-2">Let's eat!</a>
-            </p>
+            <div class="col-md-4 col-features text-center">
+              
+              <h2>Try a demo with Burger King!</h2>
+              <p>Enter your diet and view your options.</p>
 
-
-          </div> <!-- /.col-md-4 -->
-
-          <div class="col-md-4 col-features text-center">
-            
-            <h2>Input Dietary Restrictions</h2>
-
-            <span class="button-restrictions">
-              <button type="button" class="btn" data-color="danger">Dairy</button>
-              <input type="checkbox" class="hidden" unchecked />
-            </span>
-
-          </div> <!-- /.col-md-4 -->
-
-          <div class="col-md-4 col-features text-center">
-            
-            <h2>Additional Options (Beta)</h2>
-            <p>Keep in mind that these are experimental features that we plan on having soon, but there might still be bugs with these options.</p>
-
-          </div> <!-- /.col-md-4 -->
+              <p>
+                <a class="btn btn-secondary" id="submit-bk-example">Let's eat!</a>
+              </p>
 
 
+            </div> <!-- /.col-md-4 -->
+
+            <div class="col-md-4 col-features text-center">
+              
+              <h2>Input Dietary Restrictions</h2>
+              <p>Click on the restrictions that affect your diet.</p>
+
+              <span class="button-restrictions">
+                <button type="button" class="btn" data-color="danger">Dairy</button>
+                <input type="checkbox" class="hidden" id="dairy" unchecked />
+              </span>
+              <span class="button-restrictions">
+                <button type="button" class="btn" data-color="danger">Eggs</button>
+                <input type="checkbox" class="hidden" id="eggs" unchecked />
+              </span>
+              <span class="button-restrictions">
+                <button type="button" class="btn" data-color="danger">Soy</button>
+                <input type="checkbox" class="hidden" id="soy" unchecked />
+              </span>
+              <span class="button-restrictions">
+                <button type="button" class="btn" data-color="danger">Wheat</button>
+                <input type="checkbox" class="hidden" id="wheat" unchecked />
+              </span>
+              <span class="button-restrictions">
+                <button type="button" class="btn" data-color="danger">Peanuts</button>
+                <input type="checkbox" class="hidden" id="peanuts" unchecked />
+              </span>
+              <span class="button-restrictions">
+                <button type="button" class="btn" data-color="danger">Treenuts</button>
+                <input type="checkbox" class="hidden" id="treenuts" unchecked />
+              </span>
+              <span class="button-restrictions">
+                <button type="button" class="btn" data-color="danger">Fish</button>
+                <input type="checkbox" class="hidden" id="fish" unchecked />
+              </span>
+              <span class="button-restrictions">
+                <button type="button" class="btn" data-color="danger">Shellfish</button>
+                <input type="checkbox" class="hidden" id="shellfish" unchecked />
+              </span>
+              <span class="button-restrictions">
+                <button type="button" class="btn" data-color="danger">Vegan</button>
+                <input type="checkbox" class="hidden" id="vegan" unchecked />
+              </span>
+              <span class="button-restrictions">
+                <button type="button" class="btn" data-color="danger">Vegetarian</button>
+                <input type="checkbox" class="hidden" id="vegetarian" unchecked />
+              </span>
+              <span class="button-restrictions">
+                <button type="button" class="btn" data-color="danger">Gluten-Free</button>
+                <input type="checkbox" class="hidden" id="gluten-free" unchecked />
+              </span>
+
+            </div> <!-- /.col-md-4 -->
+
+            <div class="col-md-4 col-features text-center">
+              
+              <h2>Additional Options (Beta)</h2>
+              <p>Keep in mind that these are experimental features that we plan on having soon; there might still be bugs with these options.</p>
+
+                  <fieldset class="form-group inline-label">
+                    <input type="text" class="form-control" id="additionalRestrictions" placeholder="Use a comma separated list...">
+                    <label for="additionalRestrictions">Additional Restrictions</label>
+                  </fieldset>
+                  <fieldset class="form-group inline-label">
+                    <input type="text" class="form-control" id="allowIngredients" placeholder="Use a comma separated list...">
+                    <label for="allowIngredients">Ingredients to Allow</label>
+                  </fieldset>
+
+                <p>Here is an example of how to use this section:</p>
+
+                <fieldset class="form-group inline-label">
+                  <input type="text" class="form-control" id="example-input" placeholder="">
+                  <label for="example-input" id="example-input-label"></label>
+                </fieldset>
+
+            </div> <!-- /.col-md-4 -->
+
+          </form>
           
         </div> <!-- /.row -->
       </div> <!-- /.container -->
     </section>
+
+    <!-- User Benefits -->
+    <section class="jumbotron" role="banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+
+            <!-- Logo -->
+            <!-- <figure class="text-center">
+              <a href="./index.html">
+                <img class="img-logo" src="images/logo.png" alt="">
+              </a>
+            </figure> --> 
+            <!-- /.text-center -->
+
+            <!-- Title -->
+            <h1>
+              User Benefits
+            </h1>
+
+            <!-- Fork -->
+            <figure class="fork-heading">
+              <img class="img-iPhone fork-right" src="images/fork-no-shadow.png" style="width: 450px !important" alt="">
+            </figure>
+
+            <!-- Sub title -->
+            <div class="row bulleted-list shadow">
+              <div class="col-md-6">
+                <ul>
+                  <li>Learn safe food options</li>
+                  <li>Spend less time w/questions</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul>
+                  <li>Know menu beforehand</li>
+                  <li>Track nutritional information</li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="bulleted-list" style="margin-top: 1em">If this interests you, we'll send you exactly one email to let you know
+            when the app is released on iOS and Android.</p>
+
+            <!-- Mailchimp stuff -->
+            <div class="horizontal-subscribe-form" style="margin-top: 1em">
+                <form class="form-inline mailchimp" action="subscribe.php" method="POST">
+                    <input type="email" id="cf-email" name="email" class="form-control input-box hide-this" placeholder="Enter your Email...">
+                    <button type="submit" id="submit_subscribe" class="btn btn-primary standard-button hide-this">Let me know!</button>
+                </form>
+                <!-- MAILCHIMP SUCCESS AND ERROR MESSAGE -->
+                <p class="mailchimp-success white-text"><span class="icon-check-alt2 colored-text"></span>Thanks! Please confirm your subscription from your email inbox</p>
+                <p class="mailchimp-error white-text"><span class="icon-close-alt2"></span>Error! Please enter correct email</p>
+            </div>
+          </div> <!-- /.col-md-8 -->
+
+          <div class="col-md-4">
+
+            <!-- Images showcase -->
+            <figure class="iphone-up">
+              <img class="img-iPhone" src="images/iphone/2.png" alt="">
+            </figure>
+
+          </div> <!-- /.col-md-4 -->
+        </div> <!-- /.row -->
+      </div> <!-- /.container -->
+    </section> <!-- /.jumbotron -->
 
 
     <section class="features-section" id="section-2">
@@ -442,6 +572,6 @@
 
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="build/app.js"></script>
-    
+
   </body>
 </html>

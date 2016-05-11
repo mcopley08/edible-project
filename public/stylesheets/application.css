@@ -2580,7 +2580,7 @@ legend {
 }
 
 label {
-  display: inline-block;
+  display: inherit;
   max-width: 100%;
   margin-bottom: 5px;
   font-weight: bold;
@@ -3648,7 +3648,8 @@ tbody.collapse.in {
   padding: 30px 0;
   margin-bottom: 0;
   color: white;
-  background: #2e2f41 url(../images/accent-texture.png) 0 0 no-repeat;
+  /*background: #2e2f41 url(../images/accent-texture.png) 0 0 no-repeat;*/
+  background: #27ae60;
   background-size: cover;
   text-align: center;
 }
