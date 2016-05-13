@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 	    	src:['public/stylesheets/application.css',
 	    		 'public/stylesheets/mailchimp.css',
 	    		 'public/stylesheets/animations.css',
-	    		 'public/stylesheets/css3-cheat-sheet.css',
+	    		 'public/stylesheets/result-card.css',
 	    		 'public/stylesheets/style.css' ],
 	        dest:'public/build/app.min.css'
 	    }
