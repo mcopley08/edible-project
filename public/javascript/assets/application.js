@@ -120,11 +120,9 @@ $("#submit-bk-example").on('click', function(e) {
     }, 1000);
   }
 
+  var api_request = 'https://gwet5nyzt5.execute-api.us-east-1.amazonaws.com/alpha/restaurants/old-town/full-menu?returnBoth=true&constraints=';
 
-
-  var api_request = 'https://gwet5nyzt5.execute-api.us-east-1.amazonaws.com/alpha/restaurants/burger-king/full-menu?returnBoth=true&constraints=';
-
-  // adding the form data
+  // adding the form data 
   $(".button-restrictions > input").each(function() {
     if ($(this)[0].checked ) {
       var restriction = $(this).prev().text().toLowerCase();
@@ -170,18 +168,48 @@ function displayData(results) {
   console.log('edible items legnth is: ' + results);
 
   for (var i = 0; i < results.edible.items.length; ++i) {
-    $('#edible > ul').append('<li><a href="#">' + results.edible.items[i].name + '</a><span>More Info</span></li>')
+    $('#edible > ul').append('<li><a href="#">' + results.edible.items[i].name + '</a><span>More Info</span><br>');
+    if (results.edible.items[i].hasOwnProperty('ingredients')) {
+      for (var j = 0; j < results.edible.items[i].ingredients.length; j++) {
+        $('#edible > ul > li').last().append(results.edible.items[i].ingredients[j] + ', ');
+      }
+    }
+    if (results.edible.items[i].hasOwnProperty('components')) {
+      for (var j = 0; j < results.edible.items[i].components.length; j++) { 
+        $('#edible > ul > li').last().append(results.edible.items[i].components[j] + ', ');
+      }
+    } 
+    $('#edible > ul').append('</li>'); 
   }
   $('#edible > ul').append('<h3 class="artist-title">Components</h3>');
   for (var i = 0; i < results.edible.components.length; ++i) {
-    $('#edible > ul').append('<li><a href="#">' + results.edible.components[i].name + '</a><span>More Info</span></li>')
+    $('#edible > ul').append('<li><a href="#">' + results.edible.components[i].name + '</a><span>More Info</span><br>');
+    for (var j = 0; j < results.edible.components[i].ingredients.length; j++) {
+      $('#edible > ul > li').last().append(results.edible.components[i].ingredients[j] + ', ');
+    }
+    $('#edible > ul').append('</li>');
   }
   for (var i = 0; i < results['not-edible'].items.length; ++i) {
-    $('#not-edible > ul').append('<li><a href="#">' + results['not-edible'].items[i].name + '</a><span>More Info</span></li>')
+    $('#not-edible > ul').append('<li><a href="#">' + results['not-edible'].items[i].name + '</a><span>More Info</span><br>');
+    if (results['not-edible'].items[i].hasOwnProperty('ingredients') && results['not-edible'].items[i].ingredients.length > 0) {
+      for (var j = 0; j < results['not-edible'].items[i].ingredients.length; j++) {
+        $('#not-edible > ul > li').last().append(results['not-edible'].items[i].ingredients[j] + ', ');
+      }
+    }
+    if (results['not-edible'].items[i].hasOwnProperty('components')) {
+      for (var j = 0; j < results['not-edible'].items[i].components.length; j++) {
+        $('#not-edible > ul > li').last().append(results['not-edible'].items[i].components[j] + ', ');
+      }
+    }
+    $('#not-edible > ul').append('</li>');
   }
   $('#not-edible > ul').append('<h3 class="artist-title">Components</h3>');
   for (var i = 0; i < results['not-edible'].components.length; ++i) {
-    $('#not-edible > ul').append('<li><a href="#">' + results['not-edible'].components[i].name + '</a><span>More Info</span></li>')
+    $('#not-edible > ul').append('<li><a href="#">' + results['not-edible'].components[i].name + '</a><span>More Info</span><br>');
+    for (var j = 0; j < results['not-edible'].components[i].ingredients.length; j++) {
+      $('#not-edible > ul > li').last().append(results['not-edible'].components[i].ingredients[j] + ', ');
+    }
+    $('#not-edible > ul').append('</li>');
   }
 
   // making the slider go up and down while the content fills up.
