@@ -20,6 +20,7 @@ module.exports = function(grunt) {
 	    		 'public/javascript/vendor/jquery.ajaxchimp.js',
 	    		 'public/javascript/vendor/typed.min.js',
 	    		 'public/javascript/assets/checkbox.js',
+	    		 'public/javascript/vendor/magnific-popup-optimized.min.js',
 	    		 'public/javascript/assets/application.js' ],
 	    	dest:'public/build/app.js'
 	    },
@@ -28,6 +29,7 @@ module.exports = function(grunt) {
 	    		 'public/stylesheets/mailchimp.css',
 	    		 'public/stylesheets/animations.css',
 	    		 'public/stylesheets/result-card.css',
+	    		 'public/stylesheets/popup.css',
 	    		 'public/stylesheets/style.css' ],
 	        dest:'public/build/app.min.css'
 	    }
