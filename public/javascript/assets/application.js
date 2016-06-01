@@ -171,47 +171,21 @@ function displayData(results) {
   console.log('edible items legnth is: ' + results);
 
   for (var i = 0; i < results.edible.items.length; ++i) {
-    $('#edible > ul').append('<li onclick="daddyTime(this.firstElementChild.innerHTML)"><a>' + results.edible.items[i].name + '</a><span>More Info</span><br>');
-    // if (results.edible.items[i].hasOwnProperty('ingredients')) {
-    //   for (var j = 0; j < results.edible.items[i].ingredients.length; j++) {
-    //     $('#edible > ul > li').last().append(results.edible.items[i].ingredients[j] + ', ');
-    //   }
-    // } 
-    // if (results.edible.items[i].hasOwnProperty('components')) {
-    //   for (var j = 0; j < results.edible.items[i].components.length; j++) { 
-    //     $('#edible > ul > li').last().append(results.edible.items[i].components[j] + ', ');
-    //   }
-    // }
+    $('#edible > ul').append('<li class="hover-tint" onclick="daddyTime(this.firstElementChild.innerHTML)"><a>' + results.edible.items[i].name + '</a><span>Info <i class="fa fa-info-circle" aria-hidden="true"></i></span><br>');
     $('#edible > ul').append('</li>'); 
   }
   $('#edible > ul').append('<h3 class="artist-title">Components</h3>');
   for (var i = 0; i < results.edible.components.length; ++i) {
-    $('#edible > ul').append('<li onclick="daddyTime(this.firstElementChild.innerHTML)"><a>' + results.edible.components[i].name + '</a><span>More Info</span><br>');
-    // for (var j = 0; j < results.edible.components[i].ingredients.length; j++) {
-    //   $('#edible > ul > li').last().append(results.edible.components[i].ingredients[j] + ', ');
-    // }
+    $('#edible > ul').append('<li class="hover-tint" onclick="daddyTime(this.firstElementChild.innerHTML)"><a>' + results.edible.components[i].name + '</a><span>Info <i class="fa fa-info-circle" aria-hidden="true"></i></span><br>');
     $('#edible > ul').append('</li>');
   }
   for (var i = 0; i < results['not-edible'].items.length; ++i) {
-    $('#not-edible > ul').append('<li onclick="daddyTime(this.firstElementChild.innerHTML)"><a>' + results['not-edible'].items[i].name + '</a><span>More Info</span><br>');
-    // if (results['not-edible'].items[i].hasOwnProperty('ingredients') && results['not-edible'].items[i].ingredients.length > 0) {
-    //   for (var j = 0; j < results['not-edible'].items[i].ingredients.length; j++) {
-    //     $('#not-edible > ul > li').last().append(results['not-edible'].items[i].ingredients[j] + ', ');
-    //   }
-    // }
-    // if (results['not-edible'].items[i].hasOwnProperty('components')) {
-    //   for (var j = 0; j < results['not-edible'].items[i].components.length; j++) {
-    //     $('#not-edible > ul > li').last().append(results['not-edible'].items[i].components[j] + ', ');
-    //   }
-    // }
+    $('#not-edible > ul').append('<li class="hover-tint" onclick="daddyTime(this.firstElementChild.innerHTML)"><a>' + results['not-edible'].items[i].name + '</a><span>Info <i class="fa fa-info-circle" aria-hidden="true"></i></span><br>');
     $('#not-edible > ul').append('</li>');
   }
   $('#not-edible > ul').append('<h3 class="artist-title">Components</h3>');
   for (var i = 0; i < results['not-edible'].components.length; ++i) {
-    $('#not-edible > ul').append('<li onclick="daddyTime(this.firstElementChild.innerHTML)"><a>' + results['not-edible'].components[i].name + '</a><span>More Info</span><br>');
-    // for (var j = 0; j < results['not-edible'].components[i].ingredients.length; j++) {
-    //   $('#not-edible > ul > li').last().append(results['not-edible'].components[i].ingredients[j] + ', ');
-    // }
+    $('#not-edible > ul').append('<li class="hover-tint" onclick="daddyTime(this.firstElementChild.innerHTML)"><a>' + results['not-edible'].components[i].name + '</a><span>Info <i class="fa fa-info-circle" aria-hidden="true"></i></span><br>');
     $('#not-edible > ul').append('</li>');
   }
 
@@ -283,8 +257,13 @@ function daddyTime(food_name) {
 
   // clearing the previous text & updating w/new info
   $("#test-popup").text("");
-  $("#test-popup").append('<h3 class="artist-title">' + food_obj.name + '</h3>');
-  $("#test-popup").append('<p>' + toTitleCase(ingredient_list) + '</p>');
+  $("#test-popup").append('<h3 class="item-heading">' + food_obj.name + '</h3>');
+  $("#test-popup").append('<p><b>Ingredients: </b>' + toTitleCase(ingredient_list) + '</p>');
+  $("#test-popup").append('<p class="allergens">Contains: ' + listAllergens(food_obj) + '</p>');
+  var special_diet = listSpecial(food_obj);
+  if (special_diet !== "") {
+    $("#test-popup").append('<p class="special-diets">*This item might be ' + special_diet + '</p>');
+  }
 
   $("#dad").click();
 }
@@ -308,5 +287,56 @@ $('#dad').magnificPopup({
   },
   midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
 });
+
+function listAllergens(item) {
+  var result = "";
+  if (item.wheat === "true") {
+    result += "Wheat, ";
+  } 
+  if (item.dairy === "true") {
+    result += "Dairy, ";
+  } 
+  if (item.soy === "true") {
+    result += "Soy, ";
+  } 
+  if (item.eggs === "true") {
+    result += "Eggs, ";
+  } 
+  if (item.treenuts === "true") {
+    result += "Treenuts, ";
+  } 
+  if (item.peanuts === "true") {
+    result += "Peanuts, ";
+  } 
+  if (item.shellfish === "true") {
+    result += "Shellfish, ";
+  } 
+  if (item.fish === "true") {
+    result += "Fish, ";
+  } 
+  // accounting for the last comma + space
+  if (result !== "") {
+    result = result.substring(0, result.length - 2);
+  }
+  return result;
+}
+
+function listSpecial(item) {
+  var result = "";
+  if (item.vegan === "true") {
+    result += "Vegan, ";
+  } 
+  if (item.vegetarian === "true") {
+    result += "Vegetarian, ";
+  } 
+  if (item["gluten-free"] === "true") {
+    result += "Gluten-Free, ";
+  } 
+  // accounting for the last comma + space
+  if (result !== "") {
+    result = result.substring(0, result.length - 2);
+  }
+  return result;
+}
 
 
