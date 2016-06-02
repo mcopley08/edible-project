@@ -16,6 +16,10 @@
     padding: 4px 4px 4px 4px;
 } 
 
+.text-shadow {
+	text-shadow: 1px 1px #000;
+}
+
 .btn {
 	margin-bottom: 5px !important; 
 } 
@@ -30,6 +34,10 @@
   color: white;
   background-color: #27ae60;
   border-color: #009d95;
+}
+
+.btn-secondary:hover {
+	color: #bec4c8 !important;
 }
 
 /* BK area: cool input area stuff */
@@ -71,8 +79,12 @@
 
 .bk-container {
 	background-color: #ededed;
-	padding: 40px 0;
+	padding: 0px;
 	margin-top: 0 !important;
+}
+
+#bk-contents {
+	/*background-color: #bec4c8;*/
 }
 
 /*** loader ***/
