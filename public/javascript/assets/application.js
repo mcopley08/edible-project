@@ -122,7 +122,7 @@ $("#submit-bk-example").on('click', function(e) {
     }, 1000);
   }
 
-  var api_request = 'https://gwet5nyzt5.execute-api.us-east-1.amazonaws.com/alpha/restaurants/burger-king/full-menu?returnBoth=true&constraints=';
+  var api_request = 'https://edible-api.herokuapp.com/restaurants/burger-king/full-menu?returnBoth=true&constraints=';
 
   // adding the form data 
   $(".button-restrictions > input").each(function() {
